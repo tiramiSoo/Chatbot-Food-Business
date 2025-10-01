@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Chatbot</title>
+
+    <!-- Link to CSS in FastAPI static -->
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="#home">HOME</a> |
+                <a href="#menu">MENU</a> |
+                <a href="#location">LOCATION</a> |
+                <a href="#aboutus">ABOUT US</a> |
+                <a href="#contactus">CONTACT US</a>
+            </nav>
+        </header>
+
+        <!-- Home Section -->
+        <section id="home">
+            <img src="/static/banner.jpg" alt="Banner">
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="grid-container">
+                <img src="/static/menu1.jpg" alt="Menu item 1">
+                <img src="/static/menu2.jpg" alt="Menu item 2">
+                <img src="/static/menu3.jpg" alt="Menu item 3">
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location">
+            <h2>Location</h2>
+            <p>38 Patli Gali, Mumbai</p>
+            <!-- Optional: Add Google Maps embed here -->
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contactus">
+            <h2>Contact Us</h2>
+            <p>
+                Got questions? Want to place an order?<br>
+                Call us at <strong>+91 791234567</strong><br>
+                or email us at <a href="mailto:info@atliqfastfood.com">info@atliqfastfood.com</a>
+            </p>
+        </section>
+
+        <!-- Dialogflow Messenger -->
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger
+          intent="WELCOME"
+          chat-title="Food Order Chatbot"
+          agent-id="5d8b09ab-d4da-42f1-9321-e936790ef402"
+          language-code="en">
+        </df-messenger>
+    </div>
+</body>
+</html>

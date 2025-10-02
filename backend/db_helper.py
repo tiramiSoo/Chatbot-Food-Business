@@ -8,6 +8,19 @@ cnx = mysql.connector.connect(
     database="pandeyji_eatery"
 )
 
+# def insert_review(order_id, review):
+#     cursor = cnx.cursor()
+#
+#     # Inserting the review into the reviews table
+#     insert_query = "INSERT INTO reviews (order_id, review) VALUES (%s, %s)"
+#     cursor.execute(insert_query, (order_id, review))
+#
+#     # Committing the changes
+#     cnx.commit()
+#
+#     # Closing the cursor
+#     cursor.close()
+
 def insert_order_tracking(order_id, status):
     cursor = cnx.cursor()
 
@@ -107,9 +120,9 @@ def get_order_status(order_id):
         return None
 
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
     # print(get_total_order_price(56))
     # insert_order_item('Samosa', 3, 99)
     # insert_order_item('Pav Bhaji', 1, 99)
     # insert_order_tracking(99, "in progress")
-    # print(get_next_order_id())
+    print(get_next_order_id())
